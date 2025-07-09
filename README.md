@@ -1,47 +1,59 @@
-# Coastal & Malnad Leaf Disease Detection 🌿
+# 🌿 Plant Leaf Disease Detection
 
-Automated detection of leaf diseases affecting commercial crops in India's coastal and Malnad regions using deep learning (CNN, InceptionV3, DenseNet121).
+This project is a deep learning-based web application that identifies plant leaf diseases using three powerful neural network models: **LeNet (CNN)**, **Inception**, and **DenseNet121**. It is deployed online using [Hugging Face Spaces](https://huggingface.co/spaces/Prajwalkumar0804/Leaf_Disease_Detection) with a clean Gradio UI.
 
+## 🔗 Live Demo
 
-## 🧠 Project Overview
-
-This project develops an automated leaf disease detection system for key commercial crops grown in Karnataka’s coastal and Malnad regions. The goal is to help farmers identify crop diseases early through image-based classification, enabling timely and sustainable interventions using three deep learning models:
-- Custom Convolutional Neural Network (CNN)
-- **InceptionV3**
-- **DenseNet121**
+👉 [Click to Try the App](https://huggingface.co/spaces/Prajwalkumar0804/Leaf_Disease_Detection)
 
 ---
 
-## 📂 Data Collection & Preparation
+## 🧠 Models Used
 
-- **Sources**: PlantVillage and locally collected leaf images (healthy and diseased) from coconut, arecanut, pepper crops.  
-- **Processing**:
-  - Resize to uniform dimensions (e.g., 224×224 px)
-  - Normalize pixel values
-  - Augmentation: rotation, flip, zoom, brightness adjustments
-  - Split data into 70% train, 20% validation, 10% test
+- ✅ **CNN (LeNet)** - Lightweight convolutional neural network
+- ✅ **Inception** - Deeper model with better hierarchical features
+- ✅ **DenseNet121** - Fine-tuned for high-accuracy classification
 
----
-
-## 🛠️ Models
-
-1. **Custom CNN**  
-   - Sequential layers (Conv → Pooling → Dense → Dropout)
-   - Final softmax classification layer
-
-2. **InceptionV3 (pre-trained)**  
-   - Fine‑tuned using transfer learning  
-   - Efficient multi-scale feature extraction
-
-3. **DenseNet121 (pre-trained)**  
-   - Dense connectivity for feature reuse  
-   - Fine‑tuned layers adapted for leaf disease dataset
+All three models are trained to classify a wide variety of plant leaf diseases across:
+- 🍌 Banana
+- 🥭 Mango
+- 🥥 Coconut
+- 🍈 Jackfruit
+- 🌰 Cashew
+- 🌿 Cassava
 
 ---
 
-## 🏃‍♂️ Getting Started
+## 📦 Features
 
-### Prerequisites
+- Upload any leaf image (`.jpg`, `.png`, etc.)
+- Get predictions from all 3 models
+- View predicted class and confidence score
+- Clean, responsive Gradio interface
 
-- Python 3.x  
-- Virtual environment (recommended)
+---
+
+## 🛠️ Technologies
+
+| Tool        | Use                             |
+|-------------|----------------------------------|
+| TensorFlow  | Model loading and prediction     |
+| Gradio      | Web UI for interactive inference |
+| NumPy       | Image preprocessing              |
+| Hugging Face | Hosting + deployment            |
+
+---
+
+## 🧑‍💻 Run Locally (Optional)
+
+> Clone and run the app on your machine
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Leaf_Disease_Detection.git
+cd Leaf_Disease_Detection
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
